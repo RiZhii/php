@@ -2,9 +2,6 @@
 
 namespace Service;
 
-$pdo = require __DIR__ . '/../config/db-connection.php';
-$usersService = new Service\UsersService($pdo);
-
 
 use Entity\User;
 use PDO;
