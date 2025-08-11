@@ -11,4 +11,6 @@ COPY . /var/www/html/
 RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/web|g' /etc/apache2/sites-available/000-default.conf \
     && sed -i 's|<Directory /var/www/html>|<Directory /var/www/html/web>|g' /etc/apache2/apache2.conf 
 
+RUN echo "include_path='.:/var/www/html'" > /usr/local/etc/php/conf.d/custom.ini
+
 
